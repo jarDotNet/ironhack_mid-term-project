@@ -1,1 +1,5 @@
-# ironhack_mid-term-project
+# About The Project
+
+<br>
+
+![projectCircleAgency](./assets/readme/circle_agency.png)
