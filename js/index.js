@@ -1,38 +1,14 @@
-async function load(page){
-    var response = await fetch(page);
-    var content = await response.text();
-    return content;
-}
+window.addEventListener('load', async () => {
+    try {
+        const response = await fetch('https://raw.githubusercontent.com/ironhack-jc/mid-term-api/main/projects');
+        const data = await response.json();
 
-class Header extends HTMLElement {
-    constructor() {
-        super();
+        data.forEach(addProject);
+    } catch (error) {
+        alert(error);
     }
-  
-    async connectedCallback() {
-        this.innerHTML = `
-        <style>
-            ${await load('../css/header.css')}
-        </style>
-        `;
-        this.innerHTML += await load('../pages/header.html');
-    }
-}
+});
 
-class Footer extends HTMLElement {
-    constructor() {
-        super();
-    }
-  
-    async connectedCallback() {
-        this.innerHTML = `
-        <style>
-            ${await load('../css/footer.css')}
-        </style>
-        `;
-        this.innerHTML += await load('../pages/footer.html');
-    }
+function addProject(project) {
+
 }
-  
-customElements.define('header-component', Header);
-customElements.define('footer-component', Footer);
