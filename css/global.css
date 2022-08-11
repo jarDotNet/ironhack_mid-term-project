@@ -18,17 +18,13 @@
   --Background: #F2F4FC;
 }
 
-html,
-body {
-  text-align: center;
-}
+
 
 * {
-  margin: 0 auto;
-  padding: 0;
   background: var(--Background);
+  font-size: 14px;
   font-family: "Roboto", sans-serif;
-  max-width: 1200px;
+  padding: 0;
 }
 
 /* --- DEFAULT DESIGN: SMARTPHONE --- */
