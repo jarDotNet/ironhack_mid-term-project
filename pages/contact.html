@@ -1,49 +1,49 @@
-    <!DOCTYPE html>
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Circle Agency – Contact</title>
-        <link rel="stylesheet" href="../css/global.css">
-        <link rel="stylesheet" href="../css/contact.css">
-    <!-- <script src="../js/global.js"></script>--> <!--Pending to pull original file-->
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle Agency – Contact</title>
+   <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/contact.css">
+<script src="../js/global.js"></script> <!--Pending to pull original file-->
 
-    </head>
-    <body>
-        <header-component></header-component>
+</head>
+<body>
+    <header-component></header-component>
+    
         
-            
-           <form id="form-container" action="" method="get" class="formClass">
-            <h1>Contact Us</h1>
-            <div class="nameDiv">
-                <label for="name">Full Name</label><br>
-                <input type="text" placeholder="Enter your full name" name="name" id="name">
+       <form id="form-container" action="" method="get" class="formClass">
+        <h1>Contact Us</h1>
+        <div class="nameDiv">
+            <label for="name">Full Name</label><br>
+            <input type="text" placeholder="Enter your full name" name="name" id="name" onblur="validateName()" required>
+            <p id="errorName" hidden class="errorForm">Please, complete the field NAME with your name</p>
+        </div>
+        <div class="emailAndPhone">
+            <div >
+                <label for="email">Email:</label><br>
+                <input type="email" name="email" id="email" placeholder="Enter your email address" onblur="validateEmail()" required>
+                <p id="errorEmail" hidden class="errorForm">Please, complete the field EMAIL</p>
+                <p id="errorFormatEmail" hidden class="errorForm">Invalid email</p>
             </div>
-            <div class="emailAndPhone">
-                <div >
-                    <label for="email">Email:</label><br>
-                    <input type="email" name="email" id="email" placeholder="Enter your email address">
-                </div>
-                <div >
-                    <label for="phone">Phone:</label><br>
-                    <input type="text" name="phone" id="phone" placeholder="Enter your phone number">
-                </div>
+            <div >
+                <label for="phone">Phone:</label><br>
+                <input type="text" name="phone" id="phone" placeholder="Enter your phone number" onblur="validatePhone()"required>
+                <p id="errorPhone" hidden class="errorForm">Please enter your phone number</p>
             </div>
-            <div class="messageDiv">
-                <label for="message">Message</label><br>
-                <textarea name="message" id="message" cols="30" rows="15" placeholder="Write your message here..."></textarea>
-            </div>
-            <div>
-                <button>Submit</button>
-            </div>
-           </form>
-     
-
-
-
-
-        <footer-component></footer-component> 
-    </body>
-    </html>
+        </div>
+        <div class="messageDiv">
+            <label for="message">Message</label><br>
+            <textarea name="message" id="message" cols="30" rows="15" placeholder="Write your message here..."></textarea>
+        </div>
+        <div>
+            <button type="submit" onclick="sendForm()" id="submitForm">Send Form</button>
+        </div>
+       </form>
+    <footer-component></footer-component> 
+    <script src="../js/contact.js"></script>
+</body>
+</html>
