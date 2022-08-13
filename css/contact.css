@@ -11,6 +11,7 @@
     border:none;
     background-color: white;
     height: 60px;
+    margin-block-start: 10px;
 }
 
 #phone{
@@ -18,6 +19,7 @@
     border:none;
     background-color: white;
     height: 60px;
+    margin-block-start: 10px;
 }
 
 
@@ -28,10 +30,12 @@
 
 .emailAndPhone > div {
     width:100%; 
+    margin-block-end: 20px;
 }
 
 .nameDiv{
     width:100%;
+    margin-block-end: 20px;
 }
 
 #name {
@@ -39,6 +43,7 @@
     border:none;
     background-color: white;
     height: 60px;
+    margin-block-start: 10px;
 }
 
 .messageDiv {
@@ -52,11 +57,16 @@
     width:99%;
     border:none;
     background-color: white;
+    margin-block-start: 10px;
 }
 
 #submitForm{
     width: 100%;
     height: 28px;
+}
+
+label {
+    margin-bottom: 10px;
 }
 
 /*Validations*/
