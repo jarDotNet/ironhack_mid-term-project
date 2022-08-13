@@ -54,6 +54,23 @@ class Footer extends HTMLElement {
         this.innerHTML += await load('../pages/footer.html');
     }
 }
+
+class Newsletter extends HTMLElement {
+    constructor() {
+        super();
+    }
+  
+    async connectedCallback() {
+        this.innerHTML = `
+        <style>
+            ${await load('../css/newsletter.css')}
+        </style>
+        `;
+        this.innerHTML += await load('../pages/newsletter.html');
+    }
+}
+
   
 customElements.define('header-component', Header);
 customElements.define('footer-component', Footer);
+customElements.define('newsletter-component', Newsletter);
