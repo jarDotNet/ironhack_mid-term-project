@@ -316,59 +316,6 @@ section {
     background-color: var(--PrimaryLighter);
 }
 
-/* --- CALL TO ACTION SECTION --- */
-
-.call-to-action {
-    padding: 40px 20px;
-    margin: 40px;
-}
-
-.call-to-action h2 {
-    margin-bottom: 20px;
-}
-
-.call-to-action,
-.call-to-action h2,
-.call-to-action h3,
-.call-to-action form {
-    background-color: var(--SecondaryLight);
-}
-
-.call-to-action form {
-    width: 70%;
-}
-
-.call-to-action input {
-    background-color: var(--White);
-    border: none;
-    padding: 20px;
-    font-size: 20px;
-    display: block;
-    margin: 20px auto;
-}
-
-.call-to-action input[type="email"] {
-    background-image: url("../assets/newsletter/icon/mail.svg");
-    background-repeat: no-repeat;
-    background-position: 5%;
-    border: 1px solid var(--White);
-    text-align: center;
-}
-
-.call-to-action input[type="email"]:hover {
-    border: 1px solid var(--Black);
-}
-
-.call-to-action input[type="button"] {
-    background-color: var(--Primary);
-    color: var(--White);
-}
-
-.call-to-action input[type="button"]:hover {
-    cursor: pointer;
-    color: var(--SecondaryDark);
-}
-
 /* --- INTERMEDIATE TABLET / DEKTOP ADJUSTMENTS --- */
 
 @media (min-width: 768px) and (max-width: 1500px) {
@@ -452,39 +399,6 @@ section {
 
     .testimonial-memojis {
         display: inline-block;
-    }
-
-    .call-to-action {
-        margin: 40px auto;
-        padding: 80px;
-        -top: 40px;
-    }
-
-    .call-to-action form {
-        display: grid;
-        gap: 50px;
-        grid-template-columns: 2fr 1fr;
-    }
-
-    .call-to-action h2 {
-        font-size: 40px;
-    }
-
-    .call-to-action h3 {
-        font-size: 30px;
-    }
-
-    .call-to-action input[type="email"] {
-        width: 100%;
-    }
-    
-    .call-to-action-suscribe {
-        background-color: var(--SecondaryLight);
-    }
-
-    .call-to-action-suscribe,
-    .call-to-action input[type="button"] {
-        width: 200px;
     }
 }
 
