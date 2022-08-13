@@ -37,10 +37,11 @@
         </div>
         <div class="messageDiv">
             <label for="message">Message:</label><br>
-            <textarea name="message" id="message" cols="30" rows="15" placeholder="Write your message here..."></textarea>
+            <textarea name="message" id="message" cols="30" rows="10" placeholder="Write your message here..."></textarea>
         </div>
-        <div>
-            <button type="submit" onclick="sendForm()" id="submitForm">Send Form</button>
+        <div class="buttonSubmit">
+            <button type="button" onclick="sendForm()" id="submitForm">Submit</button>
+            <p class="errorForm" id="errorSubmit" hidden>PLEASE, REVIEW THE FIELDS REQUIRED</p>
         </div>
        </form>
     <footer-component></footer-component> 

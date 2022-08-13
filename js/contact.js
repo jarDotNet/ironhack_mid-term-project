@@ -1,3 +1,7 @@
+var okName = false;
+var okEmail = false;
+var okPhone = false;
+
 function validateName(){
     let nameUser = document.getElementById("name").value;
     if(!nameUser){
@@ -7,10 +11,10 @@ function validateName(){
     }else{
         document.getElementById("errorName").hidden = true;
         document.getElementById("name").style.borderStyle = "none";
-    }
-    
+        okName = true;
+   
+    }  
 }
-
 
 function validateEmail(){
     let emailUser = document.getElementById("email").value;
@@ -23,6 +27,8 @@ function validateEmail(){
     else{
         document.getElementById("errorEmail").hidden = true;
         document.getElementById("email").style.borderStyle = "none";
+        okEmail = true;
+       
     }
     if(emailUser && !emailUser.includes('@')){
         document.getElementById("errorFormatEmail").hidden = false;
@@ -41,9 +47,22 @@ function validatePhone(){
     else{
         document.getElementById("errorPhone").hidden = true;
         document.getElementById("phone").style.borderStyle = "none";
+        okPhone = true;
+        
     }
 }
 
+
+
+
+
+
+
 function sendForm(){
-  //Pending method to validate form
+  if(okName && okEmail && okPhone){
+    document.getElementById("errorSubmit").hidden = true;
+    alert("Thank you! Your form has been sent successfully!!");
+  }else{
+    document.getElementById("errorSubmit").hidden = false;
+  }
 }
