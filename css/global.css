@@ -18,16 +18,20 @@
   --Background: #F2F4FC;
 }
 
-
-
-* {
-  background: var(--Background);
-  font-size: 14px;
-  font-family: "Roboto", sans-serif;
-  padding: 0;
+html,
+body {
+  text-align: center;
 }
 
-/* --- DEFAULT DESIGN: SMARTPHONE --- */
+* {
+  margin: 0 auto;
+  padding: 0;
+  background: var(--Background);
+  font-family: "Roboto", sans-serif;
+  max-width: 1200px;
+}
+
+/* --- COMMON STYLES --- */
 
 h1 {
   font-size: 40px;
