@@ -14,15 +14,11 @@ section {
 
 .hero-content {
     text-align: left;
-    margin-bottom: 50px;s
+    margin-bottom: 50px;
 } 
 
 .hero-content div.hero-content-buttons {
     margin: 0;
-}
-
-.hero-content a.btn:hover {
-    color: var(--SecondaryDark);
 }
 
 .hero {
@@ -32,6 +28,12 @@ section {
 
 .hero-content-buttons a:hover {
     color: var(--Primary);
+    text-decoration: underline;
+}
+
+.hero-content a.btn:hover {
+    color: var(--SecondaryDark);
+    text-decoration: none;
 }
 
 .btn {
@@ -168,6 +170,7 @@ section {
 
 .learn-more:hover {
     cursor: pointer;
+    text-decoration: underline;
 }
 
 .project-inner-card {
@@ -179,7 +182,7 @@ section {
 
 .testimonial {
     background-color: var(--NeutralDark);
-    background-image: url("../img/testimonial/orbit.png");
+    background-image: url("../assets/testimonial-section/orbit.png");
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
@@ -348,6 +351,7 @@ section {
     background-image: url("../assets/newsletter/icon/mail.svg");
     background-repeat: no-repeat;
     background-position: 5%;
+    border: 1px solid var(--White);
     text-align: center;
 }
 
@@ -362,7 +366,7 @@ section {
 
 .call-to-action input[type="button"]:hover {
     cursor: pointer;
-    font-weight: bold;
+    color: var(--SecondaryDark);
 }
 
 /* --- INTERMEDIATE TABLET / DEKTOP ADJUSTMENTS --- */
@@ -428,7 +432,7 @@ section {
         width: 40%;
     }
 
-    .project-container {
+    .projects-container {
         display: flex;
         flex-flow: row wrap;
     }
@@ -514,7 +518,7 @@ section {
         width: 95%;
     }
 
-    .project-container {
+    .projects-container {
         display: flex;
         justify-content: space-between;
         gap: 30px;

@@ -1,47 +1,133 @@
-header{
-  margin: 1.5em 10.625em 0em 10.625em;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  
+header * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
+
+/* --- DEFAULT DESIGN: SMARTPHONE --- */
+
+.burger {
+  color: var(--NeutralMedium);
+  margin-top: 5px;
+}
+
 .menu-selected {
   color: var(--Primary);
 }
 
-.header img{
- width:  8.50vh;
- 
+.navbar {
+  font-size: 18px;
+  margin-top: 20px;
+  padding-bottom: 10px;
+  width: 90%;
 }
-.nav-bar-ul{
-  font-family:  "Roboto";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 1.4em;
-  line-height: 1.38em;
-}
-ul, a, button{
-  cursor: pointer;
+
+.main-nav {
+  display: none;
+  list-style-type: none;
   color: var(--NeutralMedium);
-  
- }
-.nav-bar a{
+  font-family: "Roboto";
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.nav-links,
+.logo {
   text-decoration: none;
 }
-.nav-bar a:hover{
-  color: #A2D6F9;
+
+.nav-links:hover {
+  color: var(--Primary);
+  text-decoration: underline;
 }
 
-.nav-bar li{
-  padding-right: 3.75em;
-  list-style: none;
-  display: inline-block;
+.main-nav li {
+  text-align: center;
+  margin: 15px auto;
 }
 
-button {
-  padding: 0.95em 1.75em 0.95em 1.75em;
-  font-size: 1.5em;
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  margin-left: 0;
+}
+
+.navbar a.btn {
   background-color: var(--Primary);
-  color: white;
-  border: none;
+  color: var(--White);
+  padding: 15px;
+  font-weight: normal;
+}
+
+.navbar-toggle {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 24px;
+}
+
+#chkToggle {
+  display: none;
+}
+
+#menuBtn:hover {
+  color: var(--SecondaryDark);
+}
+
+#chkToggle:checked+ul.main-nav,
+#chkToggle:checked+a.btn {
+  display: block;
+}
+
+/* --- TABLET ADJUSTMENTS --- */
+
+@media screen and (min-width: 768px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0;
+    height: 70px;
+    align-items: center;
+  }
+
+  #chkToggle:checked+ul.main-nav,
+  #chkToggle:checked+a.btn {
+    display: flex;
+  }
+
+  .main-nav {
+    display: flex;
+    margin-right: 30px;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .main-nav li {
+    margin: 0;
+  }
+
+  .nav-links {
+    margin-left: 40px;
+  }
+
+  .logo {
+    position: static;
+    margin-left: 90px;
+  }
+
+  .navbar-toggle {
+    display: none;
+  }
+
+  .nav-links:hover {
+    color: var(--Primary);
+  }
+
+  #menuBtn {
+    margin-top: 0;
+  }
 }
