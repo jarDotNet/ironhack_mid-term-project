@@ -32,7 +32,7 @@ function jsonProjectToHtmlArticle(project) {
 function createProjectWrapperAnchor(project) {
     const wrapperAnchor = document.createElement("a");
     wrapperAnchor.className = "project-wrapper";
-    wrapperAnchor.href = "./pages/projects.html";
+    wrapperAnchor.href = `./pages/projects.html?id=${project.uuid}`;
     
     const imgElement = document.createElement("img");
     imgElement.className = "img-project";
@@ -63,7 +63,7 @@ function createProjectInnerCard(project) {
     const learnMoreLink = document.createElement("a");
     learnMoreLink.className = "learn-more";
     learnMoreLink.innerHTML = "Learn more";
-    learnMoreLink.setAttribute("href", "#");
+    learnMoreLink.setAttribute("href", `./pages/projects.html?id=${project.uuid}`);
     divInnerCard.appendChild(learnMoreLink);
 
     return divInnerCard;
