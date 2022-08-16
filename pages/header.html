@@ -1,13 +1,23 @@
-<header class="header">
-    <a href="../index.html">
+<header>
+  <nav class="navbar">
+    <label class="navbar-toggle" id="js-navbar-toggle" for="chkToggle">
+      <i class="fa fa-bars burger"></i>
+    </label>
+    <a class="logo" href="../index.html">
       <img src="../assets/logos/circle.svg" alt="Circle Logo" />
     </a>
-    <nav class="nav-bar">
-      <ul class="nav-bar-ul">
-        <li class="menu-selected"> Home </li>
-        <li> <a href="#">Projects</a> </li>
-        <li> <a href="#">Services</a> </li>
-      </ul>
-    </nav>
-    <button>Contact Us</button>
-  </header>
+    <input type="checkbox" id="chkToggle"></input>
+    <ul class="main-nav" id="js-menu">
+      <li>
+        <a class="nav-links menu-selected" href="../index.html">Home</a>
+      </li>
+      <li>
+        <a class="nav-links" href="../pages/projects.html">Projects</a>
+      </li>
+      <li>
+        <a class="nav-links" href="../index.html#services">Services</a>
+      </li>
+    </ul>
+    <a class="btn capitalize" id="menuBtn" href="../pages/contact.html">Contact us</a>
+  </nav>
+</header>
