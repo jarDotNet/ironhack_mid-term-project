@@ -3,66 +3,77 @@ var okEmail = false;
 var okPhone = false;
 
 function validateName(){
-    let nameUser = document.getElementById("name").value;
-    if(!nameUser){
+    let nameUser = document.getElementById("name");
+    if(!nameUser.value){
         document.getElementById("errorName").hidden = false;
-        document.getElementById("name").style.borderColor = "red";
-        document.getElementById("name").style.borderStyle = "solid";
+        nameUser.style.borderColor = "red";
+        nameUser.style.borderStyle = "solid";
+        okName = false;
     }else{
         document.getElementById("errorName").hidden = true;
-        document.getElementById("name").style.borderStyle = "none";
+        nameUser.style.borderStyle = "none";
         okName = true;
-   
     }  
+    checkValues();
 }
 
 function validateEmail(){
-    let emailUser = document.getElementById("email").value;
-    if(!emailUser){
+    let emailUser = document.getElementById("email");
+    if(!emailUser.value){
         document.getElementById("errorEmail").hidden = false;
         document.getElementById("errorFormatEmail").hidden = true;
-        document.getElementById("email").style.borderColor = "red";
-        document.getElementById("email").style.borderStyle = "solid";
+        emailUser.style.borderColor = "red";
+        emailUser.style.borderStyle = "solid";
+        okEmail = false;
     }
     else{
         document.getElementById("errorEmail").hidden = true;
-        document.getElementById("email").style.borderStyle = "none";
-        okEmail = true;
-       
+        emailUser.style.borderStyle = "none";
+        okEmail = true;       
     }
-    if(emailUser && !emailUser.includes('@')){
+    if((emailUser.value && !emailUser.value.includes('@')) || (emailUser.value && !emailUser.value.includes('.com'))){
         document.getElementById("errorFormatEmail").hidden = false;
-        document.getElementById("email").style.borderColor = "red";
-        document.getElementById("email").style.borderStyle = "solid";
+        document.getElementById("errorEmail").hidden = true;
+        emailUser.style.borderColor = "red";
+        emailUser.style.borderStyle = "solid";
     }
+    else{
+        document.getElementById("errorFormatEmail").hidden = true;
+    }
+    checkValues();
 }
 
 function validatePhone(){
-    let phoneNumber = document.getElementById("phone").value;
-    if(!phoneNumber){
+    let phoneNumber = document.getElementById("phone");
+    if(!phoneNumber.value){
         document.getElementById("errorPhone").hidden = false;
-        document.getElementById("phone").style.borderColor = "red";
-        document.getElementById("phone").style.borderStyle = "solid";
+        phoneNumber.style.borderColor = "red";
+        phoneNumber.style.borderStyle = "solid";
+        okPhone = false;
     }
     else{
         document.getElementById("errorPhone").hidden = true;
-        document.getElementById("phone").style.borderStyle = "none";
-        okPhone = true;
-        
+        phoneNumber.style.borderStyle = "none";
+        okPhone = true; 
+    }
+    checkValues();
+}
+
+function checkValues(){
+    if(okName && okEmail && okPhone){
+        document.getElementById("errorSubmit").hidden = true;
     }
 }
 
 
-
-
-
-
-
 function sendForm(){
+  let incompleteForm = document.getElementById("errorSubmit");
   if(okName && okEmail && okPhone){
-    document.getElementById("errorSubmit").hidden = true;
+    incompleteForm.hidden = true;
     alert("Thank you! Your form has been sent successfully!!");
   }else{
-    document.getElementById("errorSubmit").hidden = false;
+    incompleteForm.hidden = false;
+    incompleteForm.style.borderStyle ="dotted";
+    incompleteForm.style.borderColor ="red";
   }
 }
