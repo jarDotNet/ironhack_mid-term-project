@@ -29,6 +29,8 @@ class Header extends HTMLElement {
             mq.addEventListener("change",  WindowResized);
             WindowResized(mq); 
         }
+
+        selectMenuOption();
         
         function WindowResized(mq) {
             if (mq.matches) {
@@ -36,6 +38,26 @@ class Header extends HTMLElement {
             } else {
                 menuBtn.style.display = toggle.checked ? 'inline' : 'none';
             }
+        }
+
+        function selectMenuOption() {
+            const page = getPageName();
+            const menu = document.getElementById('js-menu');
+            const menuOptions = menu.querySelectorAll('.nav-links');
+            
+            for (const element of menuOptions) {
+                element.classList.remove('menu-selected');
+                
+                if (element.href.endsWith(page)) {
+                    element.classList.add('menu-selected');
+                }
+            }
+        }
+
+        function getPageName() {    
+            var path = window.location.pathname;
+            var page = path.split("/").pop();   
+            return page;                            
         }
     }
 }
