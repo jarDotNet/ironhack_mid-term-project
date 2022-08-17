@@ -33,6 +33,7 @@
     background-position: 5%;
     border: 1px solid var(--White);
     text-align: center;
+    width: 90%;
 }
 
 .newsletter input[type="email"]:hover {
@@ -60,7 +61,7 @@
 
     .newsletter form {
         display: grid;
-        gap: 50px;
+        gap: 55px;
         grid-template-columns: 2fr 1fr;
     }
 
@@ -78,6 +79,19 @@
 
     .newsletter-suscribe {
         background-color: var(--SecondaryLight);
+    }
+
+    .newsletter-suscribe,
+    .newsletter input[type="button"] {
+        width: 160px;
+    }
+}
+
+/* --- DESKTOP ADJUSTMENTS --- */
+
+@media (min-width: 992px) {
+    .newsletter form {
+        gap: 50px;
     }
 
     .newsletter-suscribe,
