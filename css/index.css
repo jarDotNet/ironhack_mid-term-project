@@ -1,11 +1,5 @@
 /* --- HOME GENERAL --- */
 
-a {
-    text-decoration: none;
-    color: var(--NeutralMedium);
-    font-weight: bold;
-}
-
 section {
     margin-bottom: 150px !important;
 }
@@ -15,7 +9,7 @@ section {
 .hero-content {
     text-align: left;
     margin-bottom: 50px;
-} 
+}
 
 .hero-content div.hero-content-buttons {
     margin: 0;
@@ -248,7 +242,7 @@ section {
     font-size: 16px;
 }
 
-.testimonial-profile{
+.testimonial-profile {
     background-color: var(--NeutralDark);
     display: flex;
     align-items: center;
@@ -351,7 +345,7 @@ section {
         justify-content: center;
         margin-bottom: 20px;
         margin: 0 auto;
-    } 
+    }
 
     .img-card {
         display: inline-block;
