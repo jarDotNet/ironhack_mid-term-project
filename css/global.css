@@ -33,6 +33,12 @@ body {
 
 /* --- COMMON STYLES --- */
 
+a {
+  text-decoration: none;
+  color: var(--NeutralMedium);
+  font-weight: bold;
+}
+
 h1 {
   font-size: 40px;
   font-weight: 700;
@@ -59,4 +65,3 @@ h4 {
 .capitalize {
   text-transform: capitalize;
 }
-
