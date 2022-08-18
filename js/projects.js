@@ -1,40 +1,42 @@
 window.addEventListener("load", async () => {
     try {
-      const response = await fetch(
-        "https://raw.githubusercontent.com/ironhack-jc/mid-term-api/main/projects"
-      );
-      const data = await response.json();
-  
-      const mainProjectId = getQuerystringId();
-      let mainProjectIndex = data.findIndex(
-        (project) => project.uuid == mainProjectId
-      );
-      if (mainProjectIndex < 0) return;
-  
-      const mainProject = data[mainProjectIndex];
-      addMainProject(mainProject);
-  
-      data.splice(mainProjectIndex, 1);
-      const otherProjects = data.slice(0, 3).reverse();
-      addOtherProjects(otherProjects);
+        const response = await fetch(
+            "https://raw.githubusercontent.com/ironhack-jc/mid-term-api/main/projects"
+        );
+        const data = await response.json();
+
+        const mainProjectId = getQuerystringId();
+        let mainProjectIndex = data.findIndex(
+            (project) => project.uuid == mainProjectId
+        );
+        if (mainProjectIndex < 0) {
+            window.location.href = "../pages/404.html";
+        }
+
+        const mainProject = data[mainProjectIndex];
+        addMainProject(mainProject);
+
+        data.splice(mainProjectIndex, 1);
+        const otherProjects = data.slice(0, 3).reverse();
+        addOtherProjects(otherProjects);
     } catch (error) {
-      alert(error);
+        alert(error);
     }
-  });
-  
-  function getQuerystringId() {
+});
+
+function getQuerystringId() {
     const params = new Proxy(new URLSearchParams(window.location.search), {
-      get: (searchParams, prop) => searchParams.get(prop),
+        get: (searchParams, prop) => searchParams.get(prop),
     });
-  
+
     return params.id;
-  }
-  
-  function addMainProject(project) {
+}
+
+function addMainProject(project) {
     if (!project) {
-      return;
+        return;
     }
-  
+
     const projectHTML = `
           <h1 class="title">${project.name}</h1>
           <div class="subtitle">
@@ -52,27 +54,27 @@ window.addEventListener("load", async () => {
               ${project.content}
           </article>
       `;
-  
+
     const projectElement = document.getElementById("project");
     projectElement.innerHTML = projectHTML;
-  }
-  
-  function addOtherProjects(projects) {
+}
+
+function addOtherProjects(projects) {
     let articlesHTML = "";
-  
+
     projects.forEach((project) => {
-      articlesHTML += jsonProjectToOtherHtmlArticle(project);
+        articlesHTML += jsonProjectToOtherHtmlArticle(project);
     });
-  
+
     const container = document.querySelector("div.projects-container");
     container.innerHTML = articlesHTML;
-  }
-  
-  function jsonProjectToOtherHtmlArticle(project) {
+}
+
+function jsonProjectToOtherHtmlArticle(project) {
     if (!project) {
-      return;
+        return;
     }
-  
+
     const projectHTML = `
           <article class="project-card">
               <a class="project-wrapper" href="../pages/projects.html?id=${project.uuid}">
@@ -85,6 +87,6 @@ window.addEventListener("load", async () => {
               </a>
           </article>
       `;
-  
+
     return projectHTML;
-  }
+}
