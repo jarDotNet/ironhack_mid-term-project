@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Circle Agency – Home</title>
     <link rel="stylesheet" type="text/css" href="./css/global.css">
-    <link rel="stylesheet" type="text/css" href="./css/header.css">
     <link rel="stylesheet" type="text/css" href="./css/index.css">
-    <link rel="stylesheet" type="text/css"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" type="image/x-icon" href="./assets/logos/favicon.ico">
     <script src="./js/global.js"></script>
 </head>
@@ -22,8 +22,8 @@
             <h3>Circle is a digital design and development studio. We design and
                 develop astonishing websites and mobile apps.</h3>
             <div class="hero-content-buttons">
-                <a class="btn" href="./pages/contact.html">Get in touch</a>
-                <a href="./pages/projects.html">See our work</a>
+                <a class="btn" href="#newsletter">Get in touch</a>
+                <a href="#projects">See our work</a>
             </div>
         </div>
         <div class="hero-images">
@@ -52,36 +52,36 @@
         </a>
     </section>
 
-    <section class="recent-projects" hidden>
+    <section id="projects" class="recent-projects" hidden>
         <h2 class="capitalize">Recent projects</h2>
         <div class="projects-container">
             <article class="project-card">
-                <a class="project-wrapper" href="./pages/projects.html">
+                <a class="project-wrapper" href="./pages/projects.html?id=1">
                     <img class="img-project" src="./assets/projects-section/1.jpg" alt="Project 1">
                     <div class="project-inner-card">
-                        <h4 class="project-title">Simplify</h4>
+                        <h4 class="project-title">Simplify (Static)</h4>
                         <p class="project-description capitalize">UI design & App development</p>
-                        <a class="learn-more" href="#">Learn more</a>
+                        <a class="learn-more" href="./pages/projects.html?id=1">Learn more</a>
                     </div>
                 </a>
             </article>
             <article class="project-card">
-                <a class="project-wrapper" href="./pages/projects.html">
+                <a class="project-wrapper" href="./pages/projects.html?id=2">
                     <img class="img-project" src="./assets/projects-section/2.jpg" alt="Project 2">
                     <div class="project-inner-card">
                         <h4 class="project-title">Dashcoin</h4>
                         <p class="project-description capitalize">Web development</p>
-                        <a class="learn-more" href="#">Learn more</a>
+                        <a class="learn-more" href="./pages/projects.html?id=2">Learn more</a>
                     </div>
                 </a>
             </article>
             <article class="project-card">
-                <a class="project-wrapper" href="./pages/projects.html">
+                <a class="project-wrapper" href="./pages/projects.html?id=3">
                     <img class="img-project" src="./assets/projects-section/3.jpg" alt="Project 3">
                     <div class="project-inner-card">
                         <h4 class="project-title">Vectorify</h4>
                         <p class="project-description capitalize">User experience design</p>
-                        <a class="learn-more" href="#">Learn more</a>
+                        <a class="learn-more" href="./pages/projects.html?id=3">Learn more</a>
                     </div>
                 </a>
             </article>
@@ -113,7 +113,7 @@
         </div>
     </section>
 
-    <section class="services">
+    <section id="services" class="services">
         <h2 class="capitalize">Our services</h2>
         <div class="services-container">
             <article class="services-card">
@@ -143,16 +143,7 @@
         </div>
     </section>
 
-    <section class="call-to-action">
-        <h2>Do you have any questions?</h2>
-        <h3>Let us help you!</h3>
-        <form action="">
-            <input id="email" name="email" type="email" placeholder="Enter your email">
-            <a class="call-to-action-suscribe" href="./pages/contact.html">
-                <input type="button" value="Suscribe">
-            </a>
-        </form>
-    </section>
+    <newsletter-component id="newsletter"></newsletter-component>
 
     <footer-component></footer-component>
 
