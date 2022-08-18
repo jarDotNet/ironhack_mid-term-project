@@ -22,7 +22,7 @@
     background-color: var(--White);
     border: none;
     padding: 20px;
-    font-size: 20px;
+    font-size: 18px;
     display: block;
     margin: 20px auto;
 }
@@ -71,6 +71,10 @@
 
     .newsletter h3 {
         font-size: 30px;
+    }
+
+    .newsletter input {
+        font-size: 20px;
     }
 
     .newsletter input[type="email"] {
