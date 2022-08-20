@@ -174,12 +174,16 @@ input:required:valid {
 
 
 
-/* Medium devices. Tablest*/
+/* Medium devices. Tablets*/
 @media (min-width: 768px){
-    h1 {
-        font-size: 20px;
+  
+    .emailAndPhone{
+        display: flex;  
     }
-}
+    #email {
+        width: 94%;    
+    }
+   
 
 
 
