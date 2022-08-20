@@ -120,3 +120,59 @@ input:required:valid {
     background-position: right top;
     background-repeat: no-repeat;
 }
+
+
+/* MEDIA QUERY RESPONSIVE*/
+
+/* Very small devices. Mobile phone*/
+@media (max-width: 575.9px){
+    h1 {
+        font-size: 18px;
+    }
+    .emailAndPhone{
+        display: block;
+    }
+    #email{
+        width: 100%;
+    }
+    .formClass {
+        margin-left: 60px;
+        margin-right: 60px;
+    }
+    #errorSubmit {
+        font-size: 20px;
+        height: 25px;
+    }
+    .errorForm{
+        margin-top: 10px;
+    }  
+}
+
+/* Small devices. Tablest*/
+@media (min-width: 576px){
+    h1 {
+        font-size: 20px;
+    }
+}
+
+
+
+/* Medium devices. Tablest*/
+@media (min-width: 768px){
+    h1 {
+        font-size: 20px;
+    }
+}
+
+
+
+/* Big devices. */
+@media (min-width: 992px){
+  
+}
+
+
+/* Very big devices. */
+@media (min-width: 1200px){
+  
+}
