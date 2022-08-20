@@ -72,7 +72,7 @@ function sendForm() {
     alert("Thank you! Your form has been sent successfully!!");
   } else {
     incompleteForm.hidden = false;
-    incompleteForm.style.borderStyle = "dotted";
+    //incompleteForm.style.borderStyle = "dotted";
     incompleteForm.style.borderColor = "red";
   }
 }
