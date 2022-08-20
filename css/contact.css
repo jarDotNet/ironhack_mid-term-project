@@ -151,7 +151,24 @@ input:required:valid {
 /* Small devices. Tablest*/
 @media (min-width: 576px){
     h1 {
-        font-size: 20px;
+        font-size: 30px;
+    }
+    .formClass {
+        margin-left: 60px;
+        margin-right: 60px;
+    }
+    .errorForm{
+        margin-top: 10px;
+    }  
+    #errorSubmit {
+        font-size: 25px;
+        height: 60px;    
+    }
+    .emailAndPhone{
+        display: block;
+    }
+    #email{
+        width: 100%;
     }
 }
 
