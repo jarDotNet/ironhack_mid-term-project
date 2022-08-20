@@ -135,6 +135,9 @@ input:required:valid {
     #email{
         width: 100%;
     }
+    #phone {
+        width: 100%;
+    }
     .formClass {
         margin-left: 60px;
         margin-right: 60px;
@@ -170,8 +173,16 @@ input:required:valid {
     #email{
         width: 100%;
     }
+    #phone {
+        width: 100%;
+    }
+    #message {
+        width: 100%;
+    }
+   .buttonSubmit{
+        width: 100%;
+   }
 }
-
 
 
 /* Medium devices. Tablets*/
@@ -183,17 +194,14 @@ input:required:valid {
     #email {
         width: 94%;    
     }
-   
-
-
-
-/* Big devices. */
-@media (min-width: 992px){
-  
 }
 
-
-/* Very big devices. */
-@media (min-width: 1200px){
-  
+/* Large devices.*/
+@media (min-width: 992px){
+    #email {
+        width: 95%;
+    }
+    #phone {
+        width: 98%;
+    }
 }
