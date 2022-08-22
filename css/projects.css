@@ -13,7 +13,6 @@ body {
   font-size: 35px;
   margin-left: 40px;
   margin-top: 10%;
-
 }
 
 .subtitle {
@@ -80,8 +79,8 @@ body {
 }
 
 .project-title {
-    font-size: 20px;
-  }
+  font-size: 20px;
+}
 
 .project-card,
 .project-card h4,
@@ -223,7 +222,7 @@ body {
     flex-flow: row wrap;
   }
 
-  .learn-more{
+  .learn-more {
     font-size: 15px;
   }
 }
@@ -299,7 +298,7 @@ body {
     font-size: 24px;
   }
 
-  .learn-more{
+  .learn-more {
     font-size: 17px;
   }
 }
