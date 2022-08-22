@@ -198,11 +198,13 @@ body {
     margin-right: 80px;
   }
 
+
   .recent-projects h2 {
     margin: 30px;
     text-align: left;
     font-size: 32px;
   }
+
 
   .project-wrapper {
     background-color: var(--NeutralLight);
@@ -302,3 +304,4 @@ body {
     font-size: 17px;
   }
 }
+
