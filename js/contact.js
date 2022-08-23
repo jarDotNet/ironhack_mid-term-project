@@ -1,6 +1,7 @@
 var okName = false;
 var okEmail = false;
 var okPhone = false;
+var okMessage = false;
 
 function validateName() {
   let nameUser = document.getElementById("name");
@@ -59,11 +60,26 @@ function validatePhone() {
   checkValues();
 }
 
+function validateMessage(){
+  let messageUser = document.getElementById("message");
+  if(messageUser.value.length < 6){
+    document.getElementById("errorMessageUser").hidden = false;
+    messageUser.style.borderColor = "red";
+    messageUser.style.borderStyle ="solid"
+    okMessage = false;
+  }else{
+    document.getElementById("errorMessageUser").hidden = true;
+    messageUser.style.borderStyle = "none";
+    okMessage = true;
+  }
+}
+
 function checkValues() {
-  if (okName && okEmail && okPhone) {
+  if (okName && okEmail && okPhone && okMessage) {
     document.getElementById("errorSubmit").hidden = true;
   }
 }
+
 
 function sendForm() {
   let incompleteForm = document.getElementById("errorSubmit");
