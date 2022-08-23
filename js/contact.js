@@ -72,6 +72,7 @@ function validateMessage(){
     messageUser.style.borderStyle = "none";
     okMessage = true;
   }
+  checkValues();
 }
 
 function checkValues() {
@@ -82,13 +83,35 @@ function checkValues() {
 
 
 function sendForm() {
+
   let incompleteForm = document.getElementById("errorSubmit");
-  if (okName && okEmail && okPhone) {
+  if (okName && okEmail && okPhone && okMessage) {
     incompleteForm.hidden = true;
-    alert("Thank you! Your form has been sent successfully!!");
+   toggleModal();
   } else {
     incompleteForm.hidden = false;
     //incompleteForm.style.borderStyle = "dotted";
     incompleteForm.style.borderColor = "red";
   }
 }
+
+const modal = document.querySelector(".modal");
+const trigger = document.querySelector(".trigger");
+const closeButton = document.querySelector(".close-button");
+
+function toggleModal() {
+    modal.classList.toggle("show-modal");
+}
+
+function windowOnClick(event) {
+    if (event.target === modal) {
+        toggleModal();
+    }
+}
+
+closeButton.addEventListener("click", toggleModal);
+window.addEventListener("click", windowOnClick);
+
+
+
+
