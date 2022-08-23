@@ -184,7 +184,7 @@ input:required:valid {
 /* Very small devices. Mobile phone*/
 @media (max-width: 575.9px){
     h1 {
-        font-size: 18px;
+        font-size: 35px;
     }
     .emailAndPhone{
         display: block;
@@ -219,7 +219,7 @@ input:required:valid {
 /* Small devices. Tablest*/
 @media (min-width: 576px){
     h1 {
-        font-size: 30px;
+        font-size: 35px;
     }
     .formClass {
         margin-left: 60px;
@@ -259,6 +259,9 @@ input:required:valid {
     #email {
         width: 94%;    
     }
+    h1 {
+        font-size: 60px;
+      }
 }
 
 /* Large devices.*/
@@ -269,4 +272,7 @@ input:required:valid {
     #phone {
         width: 98%;
     }
+    h1 {
+        font-size: 60px;
+      }
 }
