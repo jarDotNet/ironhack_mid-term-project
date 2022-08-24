@@ -20,7 +20,7 @@ window.addEventListener("load", async () => {
         const otherProjects = data.slice(0, 3).reverse();
         addOtherProjects(otherProjects);
     } catch (error) {
-        alert(error);
+        toggleModal();
     }
 });
 
