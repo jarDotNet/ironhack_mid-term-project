@@ -31,10 +31,12 @@ function validateEmail() {
     emailUser.style.borderStyle = "none";
     okEmail = true;
   }
-  if (
-    (emailUser.value && !emailUser.value.includes("@")) ||
-    (emailUser.value && !emailUser.value.includes(".com"))
-  ) {
+  var isValid = emailUser.value
+    .toLowerCase()
+    .match(
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    );
+  if (!isValid) {
     document.getElementById("errorFormatEmail").hidden = false;
     document.getElementById("errorEmail").hidden = true;
     emailUser.style.borderColor = "red";
@@ -94,24 +96,3 @@ function sendForm() {
     incompleteForm.style.borderColor = "red";
   }
 }
-
-const modal = document.querySelector(".modal");
-const trigger = document.querySelector(".trigger");
-const closeButton = document.querySelector(".close-button");
-
-function toggleModal() {
-    modal.classList.toggle("show-modal");
-}
-
-function windowOnClick(event) {
-    if (event.target === modal) {
-        toggleModal();
-    }
-}
-
-closeButton.addEventListener("click", toggleModal);
-window.addEventListener("click", windowOnClick);
-
-
-
-
