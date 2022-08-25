@@ -30,9 +30,9 @@ Frontend Development of a website for a fictional Circle web design company, wit
 
 |                     | Name                | GitHub              |
 | :------------------ | :------------------ | :------------------ |
-| <img src="./assets/readme/avatar_alberto.svg" width="65" height="65" alt="avatar alberto"> | **Albert** | [**@albertsanle**](https://github.com/albertsanle) |
-| <img src="./assets/readme/avatar_ester.svg" width="65" height="65" alt="avatar ester"> | **Ester** | [**@Ester79**](https://github.com/Ester79)  |
-| <img src="./assets/readme/avatar_jar.svg" width="65" height="65" alt="avatar jar">| **JA Reyes** | [**@jarDotNet**](https://github.com/jarDotNet) |
+| <a href="https://github.com/albertsanle"><img src="https://avatars.githubusercontent.com/u/108616960?v=4" width="60" height="60" style="border-radius: 50%" alt="alberto avatar"></a> | **Albert** | [**@albertsanle**](https://github.com/albertsanle) |
+| <a href="https://github.com/Ester79"><img src="https://avatars.githubusercontent.com/u/56604219?v=4" width="60" height="60" style="border-radius: 50%" alt="ester avatar"></a> | **Ester** | [**@Ester79**](https://github.com/Ester79)  |
+| <a href="https://github.com/jarDotNet"><img src="https://avatars.githubusercontent.com/u/10919691?v=4" width="60" height="60" style="border-radius: 50%" alt="jar avatar"></a> | **JA Reyes** | [**@jarDotNet**](https://github.com/jarDotNet) |
 
 ### Objectives
 
