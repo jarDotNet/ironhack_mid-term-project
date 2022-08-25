@@ -30,7 +30,6 @@ input {
     padding-left: 10px;
 }
 
-
 .emailAndPhone {
     display: flex;
     width: 100%;
@@ -57,7 +56,6 @@ input {
 
 .messageDiv {
     width: 100%;
-    /*margin-bottom: 134px; */
     height: 200px;
 }
 
@@ -73,7 +71,6 @@ input {
 .buttonSubmit {
     margin-top: 60px;
 }
-
 
 #submitForm {
     width: 100%;
